@@ -1,5 +1,8 @@
 # Bareos Google Summer of Code 2024 Project Ideas List
 
+We are open for GSoC contributors to propose their own original project ideas.
+Please use [Discussions/Ideas](https://github.com/bareos/GSoC2024/discussions/categories/ideas) to propose and discuss your idea.
+
 ## Standardize Debug Message Levels
 
 The Bareos source code uses debug messages to allow detailed logging for tracing and debugging purposes.
