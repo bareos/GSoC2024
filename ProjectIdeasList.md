@@ -81,3 +81,30 @@ Python
 **Expected size of project**: ~175 hours (medium)
 
 **Difficulty rating**: medium
+
+## Create a new Bareos Plugin to allow Backup of Cloud Storage
+
+The existing plugin which is using [Apache Libcloud](https://libcloud.apache.org/) is able
+to backup data from S3 compatible storage. Unfortunately it has issues with Python versions
+above 3.8 due to using multiprocessing together with the fact that the Bareos Python plugin
+architecture is using subinterpreters.
+The idea is to create a new plugin which should also work with newer Python versions.
+It will probably still be required to use multiple data streams in parallel to allow sufficient
+performance, so the challenge is to find out which Python parallelizing module works best for this purpose.
+Additionally the new plugin should use [Apache OpenDAL](https://opendal.apache.org/) as it's
+specialized for data access with a unique API to access different cloud storage services,
+while Apache libcloud aims to cover all kinds of cloud resources.
+So by using OpenDAL it should be easy to allow the plugin to backup any of its support
+cloud storage services.
+
+**Expected outcomes**
+* A new Bareos Python Plugin using Apache OpenDAL to allow backing up cloud storage
+
+**Skills required/preferred**:
+Python
+
+**Possible mentors**: arogge, pstorz
+
+**Expected size of project**: ~350 hours (large)
+
+**Difficulty rating**: hard
