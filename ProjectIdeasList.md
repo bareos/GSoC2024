@@ -111,3 +111,32 @@ Python
 **Expected size of project**: ~350 hours (large)
 
 **Difficulty rating**: hard
+
+## Add support scripts to allow backups to object-based storages
+
+The currently existing droplet backend is far from optimal. Its upcoming
+replacement will work with scripts to interface with the storage service.
+While our first priority is to support Amazon S3 compatible storages, having
+more scripts to support different storage backends would provide significant
+value to our users.
+
+The idea is to identify public or private storage services that are reasonable
+backup targets and to implement the scripts required for Bareos to interact
+with those.
+Serivces that come to mind are for example Azure Blob Storage, Google Cloud
+Storage and OpenStack Swift, but also things like scp/sftp, WebDAV or maybe
+even something generic like OpenDAL. Basically everything that can be
+(mis-)treated as an object storage.
+
+**Expected outcomes**
+One or more backend scripts for backing up to one or more types of object
+storages.
+
+**Skills required/preferred**:
+Python and/or Bash, basic understanding of object-based storages
+
+**Possible mentors**: arogge, pstorz
+
+**Expected size of project**: flexible
+
+**Difficulty rating**: easy
