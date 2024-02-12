@@ -137,6 +137,6 @@ Python and/or Bash, basic understanding of object-based storages
 
 **Possible mentors**: arogge, pstorz
 
-**Expected size of project**: flexible
+**Expected size of project**: ~175 hours (medium)
 
 **Difficulty rating**: easy
